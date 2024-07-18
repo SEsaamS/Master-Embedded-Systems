@@ -1,0 +1,136 @@
+EX1:
+#include "stdio.h"
+int main()
+{
+	printf("1st example");
+	return 0;
+}
+##########Console-output###########
+1st example
+
+########################################################################
+ 
+EX:2
+#include <stdio.h>
+int main()
+{
+	int num;
+	    printf("Enter a integer: ");
+	    fflush(stdout);
+	    scanf("%d",&num);
+	    printf("You entered: %d",num);
+	    return 0;
+
+}
+##########Console-output###########
+Enter a integer: 25
+You entered: 25
+########################################################################
+EX:3
+#include <stdio.h>
+int main()
+{
+	int num1; int num2; int sum;
+	    printf("Enter two integer: ");
+	    fflush(stdout);
+	    scanf("%d %d",&num1,&num2);
+	    sum= num1+num2;
+	    printf("sum: %d",sum);
+	    return 0;
+
+}
+##########Console-output###########
+
+Enter two integer: 12 11
+sum: 23
+
+########################################################################
+EX:4
+#include <stdio.h>
+int main()
+{
+	float num1, num2, Multiply;
+	    printf("Enter two number: ");
+	    fflush(stdout);
+	    scanf("%f %f",&num1,&num2);
+	    Multiply= num1*num2;
+	    printf("Multiply: %f",Multiply);
+	    return 0;
+
+}
+##########Console-output###########
+
+Enter two number: 2.4 1.1
+Multiply: 2.640000
+########################################################################
+EX:5
+#include <stdio.h>
+int main()
+{
+	char c;
+	    printf("Enter a character: ");
+	    fflush(stdout);
+	    scanf("%c",&c);
+	    printf("ASCII value of %c = %d",c,c);
+	    return 0;
+
+}
+##########Console-output###########
+Enter a character: G
+ASCII value of G = 71
+########################################################################
+EX:6
+#include <stdio.h>
+int main()
+{
+	float a,b, swap;
+	    printf("Enter value of a: ");
+	    fflush(stdout);
+	    scanf("%f",&a);
+	    printf("\nEnter value of b: ");
+	    fflush(stdout);
+	    scanf("%f",&b);
+	    swap=a;
+	    a=b;
+	    b=swap;
+	    printf("\nAfter swapping, value of a = %0.2f",a);
+	    printf("\nAfter swapping, value of b = %0.2f",swap);
+	    return 0;
+
+}
+##########Console-output###########
+Enter value of a: 2.45
+
+Enter value of b: 1.2
+
+After swapping, value of a = 1.20
+After swapping, value of b = 2.45
+########################################################################
+EX:7
+#include <stdio.h>
+int main()
+{
+	float a,b;
+	    printf("Enter first number: ");
+	    fflush(stdout);
+	    scanf("%f",&a);
+	    printf("\nEnter second number: ");
+	   	fflush(stdout);
+	   	scanf("%f",&b);
+	    printf("\nAfter swapping 1st number is: %0.2f and 2nd number is: %0.2f",b,a);
+	    return 0;
+
+}
+##########Console-output###########
+Enter first number: 10
+
+Enter second number: 5
+
+After swapping 1st number is: 5.00 and 2nd number is: 10.00
+########################################################################
+
+
+
+
+
+
