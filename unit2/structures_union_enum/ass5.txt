@@ -1,0 +1,233 @@
+Ex1:
+
+#include <stdio.h>
+
+struct student{
+	char name[50];
+	int roll;
+	float marks;
+};
+int main() {
+	struct student s;
+	printf("Enter information of student : \n\n");
+	printf("Enter name : ");
+	fflush(stdout);
+	scanf("%s",s.name);
+	printf("Enter roll number : ");
+	fflush(stdout);
+	scanf("%d",&s.roll);
+	printf("Enter marks : ");
+	fflush(stdout);
+	scanf("%f",&s.marks);
+	printf("\nDisplaying informations : \n");
+	printf("Name : %s \n",s.name);
+	printf("Roll  : %d \n",s.roll);
+	printf("Marks: %0.2f\n",s.marks);
+	return 0;
+}  
+
+#####################################  COUNSOLE OUTPUT  #####################################
+
+
+Enter information of student : 
+
+Enter name : adele
+Enter roll number : 21
+Enter marks : 334.5
+
+Displaying informations : 
+Name : adele 
+Roll  : 21 
+Marks: 334.50
+################################################################################################
+EX:2
+#include <stdio.h>
+
+struct Sdistance{
+	int feet;
+	float inch;
+}d1,d2,sum;
+int main() {
+	printf("Enter information for 1st distance : \n\n");
+	printf("Enter feet : ");
+	fflush(stdout);
+	scanf("%d",&d1.feet);
+	printf("Enter inch : ");
+	fflush(stdout);
+	scanf("%f",&d1.inch);
+	printf("Enter information for 2nd distance : \n\n");
+	printf("Enter feet : ");
+	fflush(stdout);
+	scanf("%d",&d2.feet);
+	printf("Enter inch : ");
+	fflush(stdout);
+	scanf("%f",&d2.inch);
+	sum.feet=d1.feet+d2.feet;
+	sum.inch=d1.inch+d2.inch;
+	if(sum.inch>12.0)
+	{
+		sum.inch=sum.inch-12.0;
+		++sum.feet;
+	}
+	printf("\nSum of distance= %d\'-%0.1f\"",sum.feet,sum.inch);
+
+
+	return 0;
+}
+
+#####################################  COUNSOLE OUTPUT  #####################################
+
+Enter information for 1st distance : 
+
+Enter feet : 12
+Enter inch : 3.45
+Enter information for 2nd distance : 
+
+Enter feet : 12
+Enter inch : 9.2
+
+Sum of distance= 25'-0.6"
+################################################################################################
+EX:3
+#include <stdio.h>
+
+typedef struct complex{
+	float real;
+	float imag;
+}complex;
+complex add(complex n1,complex n2);
+int main() {
+	complex n1,n2,temp;
+	printf("for 1st complex number : \n\n");
+	printf("Enter real and imaginary respectively : ");
+	fflush(stdout);
+	scanf("%f%f",&n1.real,&n1.imag);
+	printf("for 2nd complex number : \n\n");
+	printf("Enter real and imaginary respectively : ");
+	fflush(stdout);
+	scanf("%f%f",&n2.real,&n2.imag);
+	temp= add(n1,n2);
+	printf("sum=%0.1f+%0.1fi",temp.real,temp.imag);
+	return 0;
+}
+complex add(complex n1,complex n2)
+{
+	complex temp;
+	temp.real=n1.real+n2.real;
+	temp.imag=n1.imag+n2.imag;
+	return(temp);
+}
+
+#####################################  COUNSOLE OUTPUT  #####################################
+
+for 1st complex number : 
+
+Enter real and imaginary respectively : 2.3 4.5
+for 2nd complex number : 
+
+Enter real and imaginary respectively : 3.4 5
+sum=5.7+9.5i
+################################################################################################
+EX:4
+#include <stdio.h>
+
+struct student{
+	char name[50];
+	int roll;
+	float marks;
+};
+int main() {
+	struct student s[10];
+	int i;
+	printf("enter information for studetns:\n\n");
+	for(i=0;i<10;++i)
+	{
+		s[i].roll=i+1;
+		printf("for roll number %d \n",s[i].roll);
+		printf("enter name: ");
+		fflush(stdout);
+		scanf("%s",s[i].name);
+		printf("enter marks: ");
+		fflush(stdout);
+		scanf("%f",&s[i].marks);
+	}
+	printf("\nDisplaying information of studetns:\n\n");
+	for(i=0;i<10;++i)
+		{
+			s[i].roll=i+1;
+			printf("information for roll number %d \n",s[i].roll);
+			printf("name: %s \n",s[i].name);
+			printf("marks: %0.1f \n",s[i].marks);
+		}
+	return 0;
+}
+
+#####################################  COUNSOLE OUTPUT  #####################################
+
+enter information for studetns:
+
+for roll number 1 
+enter name: tom
+enter marks: 98
+for roll number 2 
+enter name: jerry
+enter marks: 89 
+..
+....
+
+Displaying information of studetns:
+
+information for roll number 1 
+name: tom 
+marks: 98.0 
+information for roll number 2 
+name: jerry 
+marks: 89.0 
+################################################################################################
+EX:5
+#include <stdio.h>
+
+#define pi 3.14
+#define area(r) pi*r*r
+int main() {
+	int radius;
+	float area;
+	printf("Enter radius of circle: ");
+	fflush(stdout);
+	scanf("%d",&radius);
+	area = area(radius);
+	printf("area = %0.2f ",area);
+	return 0;
+}
+#####################################  COUNSOLE OUTPUT  #####################################
+
+Enter radius of circle: 3
+area = 28.26 
+################################################################################################
+
+EX:6
+#include <stdio.h>
+
+struct tset1
+{
+	char a[32];
+	int s;
+	float c;
+}s;
+union test2
+{
+	char z[32];
+	int x;
+	float y;
+
+}u;
+int main() {
+	printf("size of union = %d \n",sizeof(u));
+	printf("size of structure = %d",sizeof(s));
+	return 0;
+}
+
+#####################################  COUNSOLE OUTPUT  #####################################
+size of union = 32 
+size of structure = 40
+################################################################################################
